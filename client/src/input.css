@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 #app-container {
-	@apply flex flex-row gap-10 flex-wrap items-center justify-center max-w-full min-h-screen bg-slate-100 p-12;
+	@apply flex flex-row gap-10 flex-wrap items-center justify-center max-w-full min-h-screen bg-white p-12;
 }
 
 .recipe-card {
-	@apply grid relative bg-white shadow-md rounded-lg overflow-hidden w-[300px] h-[400px] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-out;
+	@apply flex flex-col relative bg-white shadow-md rounded-lg overflow-hidden w-[300px] h-[400px] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-out;
 }
 
 .recipe-card[template="true"] {
@@ -32,6 +32,26 @@
 
 .cooking-time svg {
     @apply w-5 h-5 text-white;
+}
+
+.content-section {
+    @apply p-4 self-start w-full h-full;
+}
+
+.content-section p {
+    @apply text-3xl text-ellipsis max-w-full block line-clamp-1 overflow-hidden font-bold text-slate-900;
+}
+
+.content-section p.description {
+    @apply text-sm font-[400] text-ellipsis max-w-full block line-clamp-1 overflow-hidden text-slate-600;
+}
+
+.instructions-section {
+    @apply absolute w-full h-full bg-white p-4 rounded-lg text-2xl font-bold; 
+}
+
+.instructions-section p span {
+    @apply font-normal;
 }
 
 button {

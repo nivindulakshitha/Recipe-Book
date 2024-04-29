@@ -34,6 +34,13 @@ const RecipeCard = ({ title, ingredients }) => {
                     <span>30 mins</span>
                 </div>
             </div>
+            <div className="content-section">
+                <p className="title">{title}</p>
+                <p className="description">{ingredients}</p>
+            </div>
+            <div className="instructions-section">
+                <p className="title">{title} • <span>Instructions</span> </p>
+            </div>
         </div >
     );
 }
