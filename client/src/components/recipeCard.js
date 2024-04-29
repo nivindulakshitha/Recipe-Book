@@ -40,6 +40,13 @@ const RecipeCard = ({ title, ingredients }) => {
             </div>
             <div className="instructions-section">
                 <p className="title">{title} • <span>Instructions</span> </p>
+                <div className="instructions">
+                    <ul>
+                        <li>Step 1: Boil the pasta</li>
+                        <li>Step 2: Add the tomato sauce</li>
+                        <li>Step 3: Add the meatballs</li>
+                    </ul>
+                </div>
             </div>
         </div >
     );

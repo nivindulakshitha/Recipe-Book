@@ -708,6 +708,7 @@ video {
 
 .instructions-section {
   position: absolute;
+  display: none;
   height: 100%;
   width: 100%;
   border-radius: 0.5rem;
@@ -721,6 +722,12 @@ video {
 
 .instructions-section p span {
   font-weight: 400;
+}
+
+.instructions-section .instructions {
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 button {

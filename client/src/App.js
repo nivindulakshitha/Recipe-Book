@@ -6,10 +6,6 @@ function App() {
     return (
         <div id="app-container">
             <RecipeCard title="Spaghetti" ingredients="Pasta, Tomato Sauce, Meatballs" />
-            <RecipeCard title="Spaghetti" ingredients="Pasta, Tomato Sauce, Meatballs" />
-            <RecipeCard title="Spaghetti" ingredients="Pasta, Tomato Sauce, Meatballs dsmskdlmllfklkflflndfnfdfdfdfdf  dlofd" />
-            <RecipeCard title="Spaghetti" ingredients="Pasta, Tomato Sauce, Meatballs" />
-            <RecipeCard title="" />
         </div>
     );
 }
