@@ -8,21 +8,23 @@ const port = process.env.PORT || 3000;
 app.get('/', (req, res) => {
     res.send('Server is up and running!');
 });
- 
-app.get('/api', async (req, res) => {
-    const connection = await mongoose.createConnection(process.env.MONGO_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    });
 
-    if (connection) {
-        res.send('API is working');
-    } else { 
-        res.send('API is not working');
-    }
+app.get('/api', async (req, res) => {
+    await mongoose.connect(process.env.MONGO_URI).then(() => { 
+        console.log('Connected to MongoDB');
+        if (connection) {
+            res.send('API is working');
+        } else {
+            res.send('API is not working');
+        }
+    });
 })
- 
+
+app.post('/api/c', async (req, res) => {
+    
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
- 
+

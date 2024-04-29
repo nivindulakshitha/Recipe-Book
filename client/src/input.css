@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.recipe-card {
+    @apply bg-slate-300 shadow-md rounded-lg overflow-hidden w-[300px] h-[400px];
+}
