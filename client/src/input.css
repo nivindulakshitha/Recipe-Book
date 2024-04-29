@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+#app-container {
+	@apply flex flex-row gap-10 flex-wrap items-center justify-center max-w-full min-h-screen bg-slate-100 p-12;
+}
+
 .recipe-card {
-    @apply bg-slate-300 shadow-md rounded-lg overflow-hidden w-[300px] h-[400px];
+	@apply grid relative bg-white shadow-md rounded-lg overflow-hidden w-[300px] h-[400px] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-out;
+}
+
+.recipe-card[template="true"] {
+	@apply hover:shadow-lg hover:scale-100 cursor-pointer;
+}
+
+.cover-section {
+    @apply relative h-[200px] flex;
+}
+
+.recipe-card:not([template="true"]):hover .delete-button {
+    @apply block;
+}
+
+.delete-button {
+    @apply absolute hidden top-4 right-4 w-8 h-8 p-2 bg-black bg-opacity-50 cursor-pointer rounded-full justify-self-center self-start bottom-6 hover:bg-red-400 active:bg-red-300 transition-all duration-300 ease-out;
+}
+
+.cooking-time {
+    @apply absolute flex flex-row gap-2 items-center bottom-4 left-4 bg-black bg-opacity-50 py-2 px-4 rounded-full text-white text-sm;
+}
+
+.cooking-time svg {
+    @apply w-5 h-5 text-white;
+}
+
+button {
+	@apply bg-green-500 text-slate-900 font-bold py-2 px-4 rounded-md absolute justify-self-center self-end bottom-6 hover:bg-green-600 active:bg-green-500 transition-all duration-300 ease-out;
 }
